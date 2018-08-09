@@ -1,0 +1,51 @@
+PODS:
+  - AWSAuthCore (2.6.25):
+    - AWSCore (= 2.6.25)
+  - AWSCore (2.6.25)
+  - AWSMobileClient (2.6.25):
+    - AWSAuthCore (= 2.6.25)
+  - AWSPinpoint (2.6.25):
+    - AWSCore (= 2.6.25)
+  - AWSRekognition (2.6.25):
+    - AWSCore (= 2.6.25)
+  - PKHUD (5.1.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - AWSMobileClient (~> 2.6.13)
+  - AWSPinpoint (~> 2.6.13)
+  - AWSRekognition (~> 2.6.13)
+  - PKHUD (~> 5.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSAuthCore
+    - AWSCore
+    - AWSMobileClient
+    - AWSPinpoint
+    - AWSRekognition
+    - PKHUD
+    - RxCocoa
+    - RxSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AWSAuthCore: ee797576ca94ef45b48cbf40bb113944791a09ab
+  AWSCore: 93ac57c361f6ff9c0749adf9404c4a1a1ecdaa2b
+  AWSMobileClient: 89f45bf39e73dedc2c9ce673146167e2009e8200
+  AWSPinpoint: 20ce4ece7e0726756e162a72311a4faa02564069
+  AWSRekognition: 9416fe6de9f79408e8e417f31f5ecbcfd84b4e2f
+  PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: f9df8cbf1855d31f7f2bc6f6483b262f918d254f
+
+COCOAPODS: 1.5.3

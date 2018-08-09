@@ -7,16 +7,31 @@
 //
 
 import UIKit
-
+import AWSMobileClient
+import AWSCore
+import AWSPinpoint
+import AWSRekognition
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var pinpoint: AWSPinpoint?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        // AWS Configuration
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1, identityPoolId: Constants.AWS_Credentials_Pool_ID)
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        //AWS Pinpoint Analytics Configuration
+        pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
+        //AWS Rekognition configuration
+        return AWSMobileClient.sharedInstance().interceptApplication(
+            application,
+            didFinishLaunchingWithOptions: launchOptions)
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
