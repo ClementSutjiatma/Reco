@@ -13,6 +13,9 @@ target 'Reco' do
     pod 'AWSMobileClient', '~> 2.6.13'
     pod 'AWSRekognition', '~> 2.6.13'
     pod 'AWSPinpoint', '~> 2.6.13'
+    pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Database'
 
 
   target 'RecoTests' do

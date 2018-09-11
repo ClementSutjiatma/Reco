@@ -11,6 +11,7 @@ import AWSMobileClient
 import AWSCore
 import AWSPinpoint
 import AWSRekognition
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Firebase storage configuration
+        FirebaseApp.configure()
         
         // AWS Configuration
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1, identityPoolId: Constants.AWS_Credentials_Pool_ID)

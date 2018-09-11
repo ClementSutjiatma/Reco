@@ -17,14 +17,18 @@
 		73C5CFC22109D0A4004CEBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C5CFC02109D0A4004CEBDD /* LaunchScreen.storyboard */; };
 		73C5CFCD2109D0A5004CEBDD /* RecoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFCC2109D0A5004CEBDD /* RecoTests.swift */; };
 		73C5CFD82109D0A5004CEBDD /* RecoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFD72109D0A5004CEBDD /* RecoUITests.swift */; };
-		73C5CFE92109D141004CEBDD /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFE52109D140004CEBDD /* CIImage+FaceDetection.swift */; };
-		73C5CFEA2109D141004CEBDD /* SCNNode+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFE62109D140004CEBDD /* SCNNode+Text.swift */; };
-		73C5CFEB2109D141004CEBDD /* SCNVector3+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFE72109D140004CEBDD /* SCNVector3+Distance.swift */; };
-		73C5CFEC2109D141004CEBDD /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFE82109D141004CEBDD /* Face.swift */; };
 		73C5CFEE2109D184004CEBDD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 73C5CFED2109D183004CEBDD /* Podfile */; };
 		73C5CFF0210B4322004CEBDD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFEF210B4322004CEBDD /* Constants.swift */; };
-		73C5CFF2210D3A92004CEBDD /* ClassificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5CFF1210D3A92004CEBDD /* ClassificationResponse.swift */; };
 		73C5CFF4210D8243004CEBDD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 73C5CFF3210D8243004CEBDD /* awsconfiguration.json */; };
+		B820A97221214992001FD997 /* accessKeys.csv in Resources */ = {isa = PBXBuildFile; fileRef = B820A96D21214991001FD997 /* accessKeys.csv */; };
+		B820A97321214992001FD997 /* SCNNode+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820A96E21214991001FD997 /* SCNNode+Text.swift */; };
+		B820A97421214992001FD997 /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820A96F21214992001FD997 /* CIImage+FaceDetection.swift */; };
+		B820A97521214992001FD997 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820A97021214992001FD997 /* Face.swift */; };
+		B820A97621214992001FD997 /* SCNVector3+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820A97121214992001FD997 /* SCNVector3+Distance.swift */; };
+		B87118A02125563700E8D65F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B871189F2125563700E8D65F /* GoogleService-Info.plist */; };
+		B87118A22129660000E8D65F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87118A12129660000E8D65F /* Tweet.swift */; };
+		B88695E3213224040042723B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88695E2213224040042723B /* UIColor.swift */; };
+		B88695E521347D620042723B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88695E421347D620042723B /* Strings.swift */; };
 		CA54ED85875D7AADD6DA08B7 /* Pods_RecoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5E83C8AD865175F492B059 /* Pods_RecoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,17 +66,21 @@
 		73C5CFD32109D0A5004CEBDD /* RecoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C5CFD72109D0A5004CEBDD /* RecoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoUITests.swift; sourceTree = "<group>"; };
 		73C5CFD92109D0A5004CEBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73C5CFE52109D140004CEBDD /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CIImage+FaceDetection.swift"; path = "../../../reco/FaceRecognition-in-ARKit/faceIT/CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
-		73C5CFE62109D140004CEBDD /* SCNNode+Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SCNNode+Text.swift"; path = "../../../reco/FaceRecognition-in-ARKit/faceIT/SCNNode+Text.swift"; sourceTree = "<group>"; };
-		73C5CFE72109D140004CEBDD /* SCNVector3+Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SCNVector3+Distance.swift"; path = "../../../reco/FaceRecognition-in-ARKit/faceIT/SCNVector3+Distance.swift"; sourceTree = "<group>"; };
-		73C5CFE82109D141004CEBDD /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Face.swift; path = "../../../reco/FaceRecognition-in-ARKit/faceIT/Face.swift"; sourceTree = "<group>"; };
 		73C5CFED2109D183004CEBDD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73C5CFEF210B4322004CEBDD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		73C5CFF1210D3A92004CEBDD /* ClassificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResponse.swift; sourceTree = "<group>"; };
 		73C5CFF3210D8243004CEBDD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		89EAEB44EEF7DD5081989842 /* Pods-Reco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reco.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reco/Pods-Reco.release.xcconfig"; sourceTree = "<group>"; };
 		8E5E83C8AD865175F492B059 /* Pods_RecoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C83471BD2738FB64ABBDCB /* Pods-Reco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reco/Pods-Reco.debug.xcconfig"; sourceTree = "<group>"; };
+		B820A96D21214991001FD997 /* accessKeys.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = accessKeys.csv; sourceTree = "<group>"; };
+		B820A96E21214991001FD997 /* SCNNode+Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Text.swift"; sourceTree = "<group>"; };
+		B820A96F21214992001FD997 /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
+		B820A97021214992001FD997 /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		B820A97121214992001FD997 /* SCNVector3+Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Distance.swift"; sourceTree = "<group>"; };
+		B871189F2125563700E8D65F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B87118A12129660000E8D65F /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		B88695E2213224040042723B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../playground/playground/playground/UIColor.swift; sourceTree = "<group>"; };
+		B88695E421347D620042723B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CB71DE8771DA2414622C622C /* Pods-RecoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecoTests/Pods-RecoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA2A9F9026CACACAC06989E8 /* Pods-RecoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecoUITests/Pods-RecoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECFC419F4DE1362C13BE04EE /* Pods-RecoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecoTests/Pods-RecoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +151,15 @@
 		73C5CFB42109D0A3004CEBDD /* Reco */ = {
 			isa = PBXGroup;
 			children = (
+				B87118A12129660000E8D65F /* Tweet.swift */,
+				B871189F2125563700E8D65F /* GoogleService-Info.plist */,
+				B820A96D21214991001FD997 /* accessKeys.csv */,
+				B820A96F21214992001FD997 /* CIImage+FaceDetection.swift */,
+				B820A97021214992001FD997 /* Face.swift */,
+				B88695E421347D620042723B /* Strings.swift */,
+				B820A96E21214991001FD997 /* SCNNode+Text.swift */,
+				B820A97121214992001FD997 /* SCNVector3+Distance.swift */,
+				B88695E2213224040042723B /* UIColor.swift */,
 				73C5CFF3210D8243004CEBDD /* awsconfiguration.json */,
 				73C5CFB52109D0A3004CEBDD /* AppDelegate.swift */,
 				73C5CFEF210B4322004CEBDD /* Constants.swift */,
@@ -152,11 +169,6 @@
 				73C5CFBE2109D0A4004CEBDD /* Assets.xcassets */,
 				73C5CFC02109D0A4004CEBDD /* LaunchScreen.storyboard */,
 				73C5CFC32109D0A4004CEBDD /* Info.plist */,
-				73C5CFE52109D140004CEBDD /* CIImage+FaceDetection.swift */,
-				73C5CFE82109D141004CEBDD /* Face.swift */,
-				73C5CFE62109D140004CEBDD /* SCNNode+Text.swift */,
-				73C5CFE72109D140004CEBDD /* SCNVector3+Distance.swift */,
-				73C5CFF1210D3A92004CEBDD /* ClassificationResponse.swift */,
 			);
 			path = Reco;
 			sourceTree = "<group>";
@@ -301,10 +313,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				73C5CFEE2109D184004CEBDD /* Podfile in Resources */,
+				B87118A02125563700E8D65F /* GoogleService-Info.plist in Resources */,
 				73C5CFB82109D0A3004CEBDD /* art.scnassets in Resources */,
 				73C5CFF4210D8243004CEBDD /* awsconfiguration.json in Resources */,
 				73C5CFC22109D0A4004CEBDD /* LaunchScreen.storyboard in Resources */,
 				73C5CFBF2109D0A4004CEBDD /* Assets.xcassets in Resources */,
+				B820A97221214992001FD997 /* accessKeys.csv in Resources */,
 				73C5CFBD2109D0A3004CEBDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,10 +406,19 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSRekognition/AWSRekognition.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -404,10 +427,19 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSRekognition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -422,13 +454,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				73C5CFBA2109D0A3004CEBDD /* ViewController.swift in Sources */,
-				73C5CFE92109D141004CEBDD /* CIImage+FaceDetection.swift in Sources */,
-				73C5CFF2210D3A92004CEBDD /* ClassificationResponse.swift in Sources */,
+				B88695E521347D620042723B /* Strings.swift in Sources */,
+				B87118A22129660000E8D65F /* Tweet.swift in Sources */,
 				73C5CFB62109D0A3004CEBDD /* AppDelegate.swift in Sources */,
-				73C5CFEA2109D141004CEBDD /* SCNNode+Text.swift in Sources */,
+				B820A97621214992001FD997 /* SCNVector3+Distance.swift in Sources */,
 				73C5CFF0210B4322004CEBDD /* Constants.swift in Sources */,
-				73C5CFEC2109D141004CEBDD /* Face.swift in Sources */,
-				73C5CFEB2109D141004CEBDD /* SCNVector3+Distance.swift in Sources */,
+				B820A97321214992001FD997 /* SCNNode+Text.swift in Sources */,
+				B820A97421214992001FD997 /* CIImage+FaceDetection.swift in Sources */,
+				B820A97521214992001FD997 /* Face.swift in Sources */,
+				B88695E3213224040042723B /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Reco.Reco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hex.Reco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Reco.Reco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hex.Reco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

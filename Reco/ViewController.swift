@@ -10,7 +10,8 @@ import UIKit
 import SceneKit
 import ARKit
 import Vision
-
+import FirebaseCore
+import FirebaseDatabase
 import RxSwift
 import RxCocoa
 import PKHUD
@@ -22,7 +23,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var faces: [Face] = []
     var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     let rekognitionClient = AWSRekognition.default()
-    
+    //var dataClient: DatabaseClient!
+    var ref: DatabaseReference!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = true
         bounds = sceneView.bounds
         
-        // Create a new scene //let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        //Initialize Firebase Realtime Database
+        ref = Database.database().reference()
+        //dataClient = DatabaseClient(ref_in: ref)
         // Set the scene to the view //sceneView.scene = scene
     }
     
@@ -47,7 +52,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
         
-        Observable<Int>.interval(0.6, scheduler: SerialDispatchQueueScheduler(qos: .default))
+        Observable<Int>.interval(5.0, scheduler: SerialDispatchQueueScheduler(qos: .default))
+            .debug("interval")
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .concatMap{ _ in  self.faceObservation() }
             .flatMap{ Observable.from($0)}
@@ -61,13 +67,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }.disposed(by: 👜)
         
         
-        Observable<Int>.interval(0.6, scheduler: SerialDispatchQueueScheduler(qos: .default))
+        Observable<Int>.interval(3.0, scheduler: SerialDispatchQueueScheduler(qos: .default))
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .subscribe { [unowned self] _ in
                 
-                self.faces.filter{ $0.updated.isAfter(seconds: 1.5) && !$0.hidden }.forEach{ face in
+                self.faces.filter{ $0.updated.isAfter(seconds: 5.0) && !$0.hidden }.forEach{ face in
                     print("Hide node: \(face.name)")
                     DispatchQueue.main.async { face.node.hide() }
+                }
+            }.disposed(by: 👜)
+        
+        
+        Observable<Int>.interval(3.0, scheduler: SerialDispatchQueueScheduler(qos: .default))
+            .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+            .subscribe { [unowned self] _ in
+                self.faces.filter{ !$0.hidden && !$0.twitterFilled}.forEach{ face in
+                    DispatchQueue.main.async { face.fillTwitter() }
                 }
             }.disposed(by: 👜)
     }
@@ -180,9 +195,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             self.rekognitionClient.recognizeCelebrities(getCelebrityRequest) { (response:AWSRekognitionRecognizeCelebritiesResponse?, error:Error?) in
                 if error == nil
                 {   // success
-                    print(response!)
-                    // generate a new type of response
-                    
+                    //print(response!)
                     observer.onNext((classes: response!, position: worldCoord, frame: frame))
                     observer.onCompleted()
                 }
@@ -193,37 +206,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     private func updateNode(classes: AWSRekognitionRecognizeCelebritiesResponse, position: SCNVector3, frame: ARFrame) {
-        
-        let person = classes.celebrityFaces![0]
-        
-        let name = person.name
-        
-        //check if there is recognized person
-        
-        //if there is recognized person
-        print("""
-            FIRST
-            confidence: \(String(describing: person.face?.confidence)) for \(String(describing: person.name))
-            """)
-        if Double(truncating: (person.face?.confidence!)!) < 0.80 {
-            print("not so sure")
+        var name: String = "lonny breaux"
+        var confidence: Float = 0.0
+        guard let people = classes.celebrityFaces else {
+            print("No Celebrity Faces Data")
             return
         }
+        if people.isEmpty {return}
+        
+        name = people[0].name!
+        confidence = (people[0].face!.confidence?.floatValue)!
+        print("Recognized -> Confidence: \(confidence), Name: \(name)")
         
         // Filter for existent face
-        let results = self.faces.filter{ $0.name == name && $0.timestamp != frame.timestamp }
+        //let results = self.faces.filter{ $0.name == name && $0.timestamp != frame.timestamp }
+        let results = self.faces.filter{ $0.name == name}
             .sorted{ $0.node.position.distance(toVector: position) < $1.node.position.distance(toVector: position) }
         
         // Create new face
         guard let existentFace = results.first else {
-            let node = SCNNode.init(withText: name!, position: position)
-            
+            let node = SCNNode.init(withFullName: name, position: position)
             DispatchQueue.main.async {
                 self.sceneView.scene.rootNode.addChildNode(node)
                 node.show()
-                
             }
-            let face = Face.init(name: name!, node: node, timestamp: frame.timestamp)
+            let face = Face.init(name: name, node: node, timestamp: frame.timestamp)
             self.faces.append(face)
             return
         }
@@ -233,7 +240,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             // Filter for face that's already displayed
             if let displayFace = results.filter({ !$0.hidden }).first  {
-                
                 let distance = displayFace.node.position.distance(toVector: position)
                 if(distance >= 0.03 ) {
                     displayFace.node.move(position)
